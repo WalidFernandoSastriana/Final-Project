@@ -25,7 +25,7 @@ export default function LoginPage() {
         <a href="/dashboard" className="text-xl font-bold">W-Movie</a>
         <div className="space-x-4">
           <a href="/dashboard" className="hover:underline">Home</a>
-          <a href="/contact" className="hover:underline">Contact</a>
+          <a href="/profile" className="hover:underline">Profile</a>
           <a href="/login" className="hover:underline">Login</a>
         </div>
       </nav>
