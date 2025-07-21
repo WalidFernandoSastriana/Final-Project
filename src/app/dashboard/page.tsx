@@ -27,6 +27,7 @@ export default function DashboardPage() {
       {/* Navbar */}
       <nav className="flex justify-between items-center px-4 py-2 bg-gray-800 text-white">
         <a href="/dashboard" className="text-xl font-bold">W-Movie</a>
+        <p>by Walid Fernando Sastriana</p>
         <div className="space-x-4">
           <a href="/dashboard" className="hover:underline">Home</a>
           <a href="/profile" className="hover:underline">Profile</a>

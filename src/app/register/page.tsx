@@ -1,38 +1,47 @@
-'use client'
+"use client";
 
-import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function RegisterPage() {
-  const router = useRouter()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [repeatPassword, setRepeatPassword] = useState('')
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [repeatPassword, setRepeatPassword] = useState("");
 
   const handleRegister = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (password !== repeatPassword) {
-      alert("Passwords do not match!")
-      return
+      alert("Passwords do not match!");
+      return;
     }
 
     // Simulasi proses registrasi (ganti dengan Firebase Auth nanti)
-    console.log('Registering:', email, password)
+    console.log("Registering:", email, password);
 
     // Setelah sukses, redirect ke dashboard
-    router.push('/dashboard')
-  }
+    router.push("/dashboard");
+  };
 
   return (
     <div>
       {/* Navbar */}
       <nav className="flex justify-between items-center px-4 py-2 bg-gray-800 text-white">
-        <a href="/dashboard" className="text-xl font-bold">W-Movie</a>
+        <a href="/dashboard" className="text-xl font-bold">
+          W-Movie
+        </a>
+        <p>by Walid Fernando Sastriana</p>
         <div className="space-x-4">
-          <a href="/dashboard" className="hover:underline">Home</a>
-          <a href="/profile" className="hover:underline">Profile</a>
-          <a href="/login" className="hover:underline">Login</a>
+          <a href="/dashboard" className="hover:underline">
+            Home
+          </a>
+          <a href="/profile" className="hover:underline">
+            Profile
+          </a>
+          <a href="/login" className="hover:underline">
+            Login
+          </a>
         </div>
       </nav>
 
@@ -77,16 +86,22 @@ export default function RegisterPage() {
             />
           </div>
 
-          <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full">
+          <button
+            type="submit"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full"
+          >
             Register
           </button>
         </form>
 
         <p className="mt-4 text-sm">
-          Sudah Punya Akun?{' '}
-          <a href="/login" className="text-blue-600 underline">Login</a>.
+          Sudah Punya Akun?{" "}
+          <a href="/login" className="text-blue-600 underline">
+            Login
+          </a>
+          .
         </p>
       </div>
     </div>
-  )
+  );
 }
